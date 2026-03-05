@@ -139,11 +139,220 @@
         "hitl": ".aios-core/development/squad-creator/docs/HITL-FLOW.md"
       }
     }
+    },
+    "zona-genialidade": {
+      "name": "zona-genialidade",
+      "title": "Zona Genialidade",
+      "description": "Discover your Genius Zone through integrated behavioral assessment, multi-framework analysis, and monetization blueprint. Complete assessment in 30 minutes.",
+      "version": "1.0.0",
+      "enabled": true,
+      "slashCommands": [
+        "/ZonaGenialidade",
+        "/ZG:start",
+        "/ZG:hendricks",
+        "/ZG:clifton",
+        "/ZG:sullivan",
+        "/ZG:hamilton",
+        "/ZG:hormozi",
+        "/ZG:kolbe",
+        "/ZG:hogshead"
+      ],
+      "entryPoint": "zona-genialidade-chief",
+      "path": ".aios-core/development/zona-genialidade/skills/zona-genialidade.md",
+      "agents": [
+        {
+          "name": "zona-genialidade-chief",
+          "path": ".aios-core/development/zona-genialidade/agents/zona-genialidade-chief.md",
+          "role": "Genius Zone Discovery Orchestrator"
+        },
+        {
+          "name": "gay-hendricks",
+          "path": ".aios-core/development/zona-genialidade/agents/gay-hendricks.md",
+          "role": "Zone of Genius Diagnostician (Zone of Genius Model)"
+        },
+        {
+          "name": "don-clifton",
+          "path": ".aios-core/development/zona-genialidade/agents/don-clifton.md",
+          "role": "Strengths Analytics Expert (CliftonStrengths 34)"
+        },
+        {
+          "name": "dan-sullivan",
+          "path": ".aios-core/development/zona-genialidade/agents/dan-sullivan.md",
+          "role": "Unique Ability Strategist (Unique Ability Model)"
+        },
+        {
+          "name": "roger-hamilton",
+          "path": ".aios-core/development/zona-genialidade/agents/roger-hamilton.md",
+          "role": "Wealth Dynamics Analyzer (Wealth Dynamics 8 Profiles)"
+        },
+        {
+          "name": "alex-hormozi",
+          "path": ".aios-core/development/zona-genialidade/agents/alex-hormozi.md",
+          "role": "Monetization Specialist (Value Equation + Grand Slam)"
+        },
+        {
+          "name": "kathy-kolbe",
+          "path": ".aios-core/development/zona-genialidade/agents/kathy-kolbe.md",
+          "role": "Execution Style Analyst (Kolbe Action Modes)"
+        },
+        {
+          "name": "sally-hogshead",
+          "path": ".aios-core/development/zona-genialidade/agents/sally-hogshead.md",
+          "role": "Positioning Expert (Fascination Advantage)"
+        }
+      ],
+      "triggers": [
+        "genius zone",
+        "zona de genialidade",
+        "discover my strengths",
+        "descubra meu potencial",
+        "what squad should I create",
+        "qual squad criar",
+        "monetization",
+        "como ganhar dinheiro",
+        "unique ability",
+        "habilidade única"
+      ],
+      "commands": [
+        {
+          "command": "*start",
+          "description": "Complete pipeline (assessment → analysis → matching → blueprint)"
+        },
+        {
+          "command": "*assess",
+          "description": "Run integrated assessment only"
+        },
+        {
+          "command": "*analyze",
+          "description": "Multi-framework analysis of existing assessment"
+        },
+        {
+          "command": "*recommend-squad",
+          "description": "Squad matching and recommendations"
+        },
+        {
+          "command": "*blueprint",
+          "description": "Generate final genius zone blueprint"
+        },
+        {
+          "command": "*status",
+          "description": "Show current state"
+        },
+        {
+          "command": "*resume",
+          "description": "Continue interrupted workflow"
+        },
+        {
+          "command": "*help",
+          "description": "Show all commands"
+        }
+      ],
+      "workflows": [
+        {
+          "name": "wf-integrated-assessment",
+          "path": ".aios-core/development/zona-genialidade/workflows/wf-integrated-assessment.yaml",
+          "description": "30-minute integrated behavioral assessment"
+        },
+        {
+          "name": "wf-multi-framework-analysis",
+          "path": ".aios-core/development/zona-genialidade/workflows/wf-multi-framework-analysis.yaml",
+          "description": "Parallel analysis by 7 framework experts"
+        },
+        {
+          "name": "wf-squad-matching",
+          "path": ".aios-core/development/zona-genialidade/workflows/wf-squad-matching.yaml",
+          "description": "Squad recommendation algorithm"
+        },
+        {
+          "name": "wf-blueprint-generation",
+          "path": ".aios-core/development/zona-genialidade/workflows/wf-blueprint-generation.yaml",
+          "description": "10-section genius zone blueprint generation"
+        }
+      ],
+      "frameworks": [
+        {
+          "name": "Zone of Genius Model",
+          "expert": "Gay Hendricks",
+          "application": "Identify current zone and breakthrough opportunities"
+        },
+        {
+          "name": "CliftonStrengths 34",
+          "expert": "Don Clifton",
+          "application": "Map talents and dominant domain"
+        },
+        {
+          "name": "Unique Ability Model",
+          "expert": "Dan Sullivan",
+          "application": "Find unique ability and delegation strategy"
+        },
+        {
+          "name": "Wealth Dynamics 8 Profiles",
+          "expert": "Roger Hamilton",
+          "application": "Determine entrepreneurial profile and squad match"
+        },
+        {
+          "name": "Value Equation + Grand Slam",
+          "expert": "Alex Hormozi",
+          "application": "Design monetization strategy and pricing"
+        },
+        {
+          "name": "Kolbe Action Modes",
+          "expert": "Kathy Kolbe",
+          "application": "Identify execution style and conative strengths"
+        },
+        {
+          "name": "Fascination Advantage",
+          "expert": "Sally Hogshead",
+          "application": "Define positioning and personal archetype"
+        }
+      ],
+      "qualityGates": [
+        {
+          "id": "QG-001",
+          "name": "Intake Validated",
+          "transition": "Input → Assessment",
+          "blocking": true
+        },
+        {
+          "id": "QG-002",
+          "name": "Assessment Complete",
+          "transition": "Assessment → Analysis",
+          "blocking": true
+        },
+        {
+          "id": "QG-003",
+          "name": "Profile Synthesized",
+          "transition": "Analysis → Matching",
+          "blocking": true
+        },
+        {
+          "id": "QG-004",
+          "name": "Blueprint Reviewed",
+          "transition": "Output → Entrega",
+          "blocking": true
+        }
+      ],
+      "installation": {
+        "date": "2026-03-05",
+        "source": "Downloads/zona-genialidade.zip",
+        "installedBy": "Alvaro Shoji",
+        "status": "active"
+      },
+      "documentation": {
+        "quickStart": ".aios-core/development/zona-genialidade/README.md",
+        "install": ".aios-core/development/zona-genialidade/INSTALL.md",
+        "knowledgeBase": ".aios-core/development/zona-genialidade/data/zona-genialidade-kb.md"
+      }
+    }
   },
   "metadata": {
     "version": "1.0.0",
-    "lastUpdated": "2026-03-05T15:10:00Z",
-    "totalSkills": 1,
-    "activeSkills": 1
+    "lastUpdated": "2026-03-05T15:20:00Z",
+    "totalSkills": 2,
+    "activeSkills": 2,
+    "skillsList": [
+      "squad (v3.0.0)",
+      "zona-genialidade (v1.0.0)"
+    ]
   }
 }
