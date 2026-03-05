@@ -1,0 +1,149 @@
+{
+  "skills": {
+    "squad": {
+      "name": "squad",
+      "title": "Squad Creator Premium",
+      "description": "Master orchestrator for creating AI squads based on elite minds. Clone real minds, extract DNA, create high-quality agents.",
+      "version": "3.0.0",
+      "enabled": true,
+      "slashCommands": [
+        "/squad",
+        "/create-squad",
+        "/squad:oalanicolas",
+        "/squad:pedro-valerio"
+      ],
+      "entryPoint": "squad-chief",
+      "path": ".aios-core/development/squad-creator/skills/squad.md",
+      "agents": [
+        {
+          "name": "squad-chief",
+          "path": ".aios-core/development/squad-creator/agents/squad-chief.md",
+          "role": "Master orchestrator for squad creation"
+        },
+        {
+          "name": "oalanicolas",
+          "path": ".aios-core/development/squad-creator/agents/oalanicolas.md",
+          "role": "Mind cloning architect - Voice DNA & Thinking DNA extraction"
+        },
+        {
+          "name": "pedro-valerio",
+          "path": ".aios-core/development/squad-creator/agents/pedro-valerio.md",
+          "role": "Process absolutist - Workflow validation and audit"
+        }
+      ],
+      "triggers": [
+        "create squad",
+        "create team",
+        "want a squad",
+        "need experts in",
+        "squad de",
+        "time de",
+        "quero um squad",
+        "especialistas em"
+      ],
+      "commands": [
+        {
+          "command": "*create-squad",
+          "args": "{domain}",
+          "description": "Create complete squad from scratch"
+        },
+        {
+          "command": "*clone-mind",
+          "args": "{name}",
+          "description": "Clone single mind into agent"
+        },
+        {
+          "command": "*create-agent",
+          "description": "Create agent from DNA"
+        },
+        {
+          "command": "*validate-squad",
+          "description": "Run quality validation"
+        },
+        {
+          "command": "*refresh-registry",
+          "description": "Update ecosystem statistics"
+        },
+        {
+          "command": "*resume",
+          "description": "Continue interrupted workflow"
+        },
+        {
+          "command": "*status",
+          "description": "Show current state"
+        },
+        {
+          "command": "*help",
+          "description": "Show all commands"
+        }
+      ],
+      "workflows": [
+        {
+          "name": "wf-create-squad",
+          "path": ".aios-core/development/squad-creator/workflows/wf-create-squad.yaml",
+          "description": "Master workflow for complete squad creation"
+        },
+        {
+          "name": "wf-clone-mind",
+          "path": ".aios-core/development/squad-creator/workflows/wf-clone-mind.yaml",
+          "description": "Mind cloning pipeline with DNA extraction"
+        },
+        {
+          "name": "wf-discover-tools",
+          "path": ".aios-core/development/squad-creator/workflows/wf-discover-tools.yaml",
+          "description": "Deep tool discovery for squads"
+        }
+      ],
+      "qualityGates": [
+        {
+          "id": "SC_AGT_001",
+          "name": "Agent Structure",
+          "requirements": [
+            "Minimum 300 lines",
+            "Voice DNA present",
+            "Output examples included"
+          ]
+        },
+        {
+          "id": "SC_AGT_002",
+          "name": "Content Completeness",
+          "requirements": [
+            "All persona levels present",
+            "Commands documented",
+            "Dependencies listed"
+          ]
+        },
+        {
+          "id": "SC_AGT_003",
+          "name": "Depth",
+          "requirements": [
+            "Frameworks with theory",
+            "Thinking DNA extracted",
+            "Decision heuristics documented"
+          ]
+        }
+      ],
+      "installation": {
+        "date": "2026-03-05",
+        "source": "Downloads/squad-creator-premium.zip",
+        "installedBy": "Alvaro Shoji",
+        "status": "active"
+      },
+      "documentation": {
+        "quickStart": ".aios-core/development/squad-creator/docs/QUICK-START.md",
+        "tutorial": ".aios-core/development/squad-creator/docs/TUTORIAL-COMPLETO.md",
+        "concepts": ".aios-core/development/squad-creator/docs/CONCEPTS.md",
+        "commands": ".aios-core/development/squad-creator/docs/COMMANDS.md",
+        "troubleshooting": ".aios-core/development/squad-creator/docs/TROUBLESHOOTING.md",
+        "architecture": ".aios-core/development/squad-creator/docs/ARCHITECTURE-DIAGRAMS.md",
+        "hitl": ".aios-core/development/squad-creator/docs/HITL-FLOW.md"
+      }
+    }
+  },
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2026-03-05T15:10:00Z",
+    "totalSkills": 1,
+    "activeSkills": 1
+  }
+}
